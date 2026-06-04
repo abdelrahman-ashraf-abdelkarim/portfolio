@@ -1,5 +1,7 @@
 import 'package:animated_flip_counter/animated_flip_counter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:portfolio_app/core/theme/app_colors.dart';
 
 class StatCard extends StatelessWidget {
   final int value;
@@ -23,7 +25,7 @@ class StatCard extends StatelessWidget {
 
         color: Colors.white.withOpacity(.04),
 
-        border: Border.all(color: Colors.white12),
+        border: Border.all(color: AppColors.text.withOpacity(0.08)),
       ),
 
       child: Column(
@@ -34,7 +36,7 @@ class StatCard extends StatelessWidget {
             textStyle: TextStyle(
               fontSize: 28,
               fontWeight: FontWeight.bold,
-              color: Colors.cyan,
+              color: AppColors.accent,
             ),
           ),
 
@@ -43,6 +45,6 @@ class StatCard extends StatelessWidget {
           Text(title, textAlign: TextAlign.center),
         ],
       ),
-    );
+    ).animate().fade(duration: 400.ms).slideY(begin: .2);
   }
 }

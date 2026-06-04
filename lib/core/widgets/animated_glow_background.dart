@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/core/theme/app_colors.dart';
 
 class AnimatedGlowBackground extends StatelessWidget {
   const AnimatedGlowBackground({super.key});
@@ -15,7 +16,7 @@ class AnimatedGlowBackground extends StatelessWidget {
             height: 250,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.cyan.withOpacity(.15),
+              color: AppColors.accent.withOpacity(.15),
             ),
           ),
         ),

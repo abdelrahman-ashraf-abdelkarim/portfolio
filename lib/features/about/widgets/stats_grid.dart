@@ -18,7 +18,7 @@ class StatsGrid extends StatelessWidget {
 
       childAspectRatio: 1.3,
 
-      children: const [
+      children: [
         StatCard(value: 3, suffix: "+", title: "Years Experience"),
 
         StatCard(value: 15, suffix: "+", title: "Projects"),

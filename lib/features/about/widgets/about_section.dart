@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../../../core/widgets/section_container.dart';
 import 'about_card.dart';
@@ -14,11 +13,7 @@ class AboutSection extends StatelessWidget {
       title: "About Me",
 
       child: Column(
-        children: [
-          const AboutCard(),
-          SizedBox(height: 24),
-          StatsGrid().animate().fade().slideY(),
-        ],
+        children: [const AboutCard(), SizedBox(height: 24), StatsGrid()],
       ),
     );
   }

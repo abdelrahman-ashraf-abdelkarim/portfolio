@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/core/theme/app_colors.dart';
 
 class HeroAvatar extends StatelessWidget {
   const HeroAvatar({super.key});
@@ -10,10 +11,10 @@ class HeroAvatar extends StatelessWidget {
       height: 150,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border: Border.all(color: Colors.cyan, width: 3),
+        border: Border.all(color: AppColors.accent, width: 3),
         image: const DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage('lib/assets/images/portfolio.gif'),
+          image: AssetImage('assets/images/portfolio.gif'),
         ),
       ),
     );

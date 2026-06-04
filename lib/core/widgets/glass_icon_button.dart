@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:portfolio_app/core/theme/app_colors.dart';
 
 class GlassIconButton extends StatelessWidget {
   final Widget icon;
@@ -19,12 +20,17 @@ class GlassIconButton extends StatelessWidget {
           height: 56,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: Colors.white12),
+            border: Border.all(color: AppColors.text.withOpacity(0.08)),
             color: Colors.white.withOpacity(.05),
           ),
           child: InkWell(
             onTap: onTap,
-            child: Center(child: icon),
+            child: Center(
+              child: IconTheme(
+                data: IconThemeData(color: AppColors.text, size: 22),
+                child: icon,
+              ),
+            ),
           ),
         ),
       ),

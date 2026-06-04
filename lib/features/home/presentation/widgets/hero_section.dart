@@ -40,23 +40,26 @@ class HeroSection extends StatelessWidget {
                   SizedBox(height: 32),
 
                   HeroSocials().animate().fade(duration: 900.ms),
-                  Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Icon(
-                            Icons.keyboard_arrow_down_rounded,
-                            size: 40,
-                            color: Colors.white54,
-                          ),
-                        ],
+                ],
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 70,
+            left: 0,
+            right: 0,
+            child: Center(
+              child:
+                  Icon(
+                        Icons.keyboard_arrow_down_rounded,
+                        size: 40,
+                        color: Colors.white54,
                       )
                       .animate(
                         onPlay: (controller) =>
                             controller.repeat(reverse: true),
                       )
                       .moveY(begin: 0, end: 10, duration: 1.seconds),
-                ],
-              ),
             ),
           ),
         ],
